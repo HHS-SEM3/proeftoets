@@ -22,12 +22,12 @@ namespace MijnServer
                     using StreamReader requestLezer = new StreamReader(request);
                     string locatie = requestLezer.ReadLine().Split(" ")[1].Substring(1);
                     if (locatie.Contains("?")) {
-                        var params = locatie.Substring(locatie.IndexOf("?") + 1).Split("&").Select(i => {
+                        var parameters = locatie.Substring(locatie.IndexOf("?") + 1).Split("&").Select(i => {
                             var ii = i.Split();
                             return new {Param = ii[0], Waarde = ii[1]};
                         }); 
                     }
-                    if (locatie == "") locatie == null;
+                    if (locatie == "") locatie = null;
                     string regel = requestLezer.ReadLine();
                     while (regel != "" && !requestLezer.EndOfStream)
                     {
