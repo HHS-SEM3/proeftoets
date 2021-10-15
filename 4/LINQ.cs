@@ -9,7 +9,7 @@ class Program
         if (Student.Studenten...)
             Console.WriteLine("De langste student is een vrouw!");
         
-        // (3p) print de lengte van Eve uit, en geef een error als er meer dan Eve bestaat
+        // (3p) print de lengte van Eve uit, en geef een error als er meer dan een Eve bestaat
         Console.WriteLine(Student.Studenten...);
         
         // (3p) wat is de laagste BMI? (BMI = gewicht (kg) / lengte (cm) / lengte (cm))
